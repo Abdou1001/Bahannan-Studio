@@ -8,7 +8,53 @@
     Version: 1.0
 
 -----------------------------------------------------------------------------------*/
+// change mood the page
 
+// ==== light and dark mood ====
+const divMood = document.querySelector(`.light-dark`);
+const divMood2 = document.querySelector(`.light-dark2`);
+const iconMood = document.querySelector(`#mood`);
+const iconMood2 = document.querySelector(`#mood2`);
+
+// change the icon in click
+divMood.addEventListener("click", (_) => {
+	// dark mood
+	iconMood.classList.toggle("fa");
+	iconMood.classList.toggle("fa-moon");
+	// light mood
+	iconMood.classList.toggle("fa");
+	iconMood.classList.toggle("fa-sun");
+	//
+	document.body.classList.toggle("dark");
+});
+
+divMood2.addEventListener("click", (_) => {
+	// dark mood
+	iconMood2.classList.toggle("fa");
+	iconMood2.classList.toggle("fa-moon");
+	// light mood
+	iconMood2.classList.toggle("fa");
+	iconMood2.classList.toggle("fa-sun");
+	//
+	document.body.classList.toggle("dark");
+});
+
+// when load the page if in light mood or not
+window.addEventListener("load", (_) => {
+	if (document.body.classList.contains("dark")) {
+		iconMood.classList.add("fa");
+		iconMood.classList.add("fa-moon");
+
+		iconMood2.classList.add("fa");
+		iconMood2.classList.add("fa-moon");
+	} else {
+		iconMood.classList.add("fa");
+		iconMood.classList.add("fa-sun");
+		iconMood2.classList.add("fa");
+		iconMood2.classList.add("fa-sun");
+	}
+});
+// ----------------------------------------------
 
 $(function () {
 	("use strict");
