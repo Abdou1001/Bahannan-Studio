@@ -16,6 +16,23 @@ const divMood2 = document.querySelector(`.light-dark2`);
 const iconMood = document.querySelector(`#mood`);
 const iconMood2 = document.querySelector(`#mood2`);
 
+// استعادة الوضع المحفوظ في localStorage عند تحميل الصفحة
+if (localStorage.getItem("mood") === "light") {
+	iconMood.classList.toggle("fa", "fa-moon");
+	iconMood2.classList.toggle("fa", "fa-moon");
+
+	iconMood.classList.toggle("fa", "fa-sun");
+	iconMood2.classList.toggle("fa", "fa-sun");
+	document.body.classList.toggle("dark");
+}else{
+	iconMood.classList.toggle("fa", "fa-moon");
+	iconMood2.classList.toggle("fa", "fa-moon");
+
+	iconMood.classList.toggle("fa", "fa-sun");
+	iconMood2.classList.toggle("fa", "fa-sun");
+}
+
+
 // change the icon in click
 divMood.addEventListener("click", (_) => {
 	// dark mood
@@ -24,8 +41,14 @@ divMood.addEventListener("click", (_) => {
 	// light mood
 	iconMood.classList.toggle("fa");
 	iconMood.classList.toggle("fa-sun");
-	//
+	// add class to Body
 	document.body.classList.toggle("dark");
+	
+	if(document.body.classList.contains("dark")){
+		localStorage.setItem("mood", "dark");
+	}else{
+		localStorage.setItem("mood", "light");
+	}
 });
 
 divMood2.addEventListener("click", (_) => {
@@ -35,7 +58,7 @@ divMood2.addEventListener("click", (_) => {
 	// light mood
 	iconMood2.classList.toggle("fa");
 	iconMood2.classList.toggle("fa-sun");
-	//
+	// add class to Body
 	document.body.classList.toggle("dark");
 });
 
