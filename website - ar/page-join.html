@@ -12,7 +12,7 @@
     <meta name="author" content="">
 
     <!-- Title  -->
-    <title>استديو باحنان - تواصل معنا</title>
+    <title>استديو باحنان - انضم الى فريقنا</title>
 
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -26,6 +26,51 @@
     <!-- Core Style Css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- intl-tel-input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <!-- flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+    <style>
+
+    .file-upload {
+    display: inline-block;
+    padding: 12px 23px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    background: transparent;
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    font-weight: 200;
+    }
+
+    .file-upload:hover {
+        background: var(--text-color);
+        color: var(--bg-color);
+    }
+
+        /* إخفاء input الأصلي */
+        .hidden-input {
+            display: none;
+        }
+
+        .iti__country-list{
+            background: black !important;
+            font-size: 15px !important;
+            left: 0px !important;
+        }
+
+        .iti--allow-dropdown{
+            width: 100%;
+        }
+    </style>
 
 </head>
 
@@ -121,7 +166,7 @@
             </div>
 
             <div class="parNot text-left d-none d-lg-block">
-                <a class="lang" href="../website/page-contact.html" style="direction: ltr;"><span class="rolling-text1">A|<span
+                <a class="lang" href="../website/page-join.html" style="direction: ltr;"><span class="rolling-text1">A|<span
                             class="not">E </span> <i class="fa-solid fa-language not px-1"></i></span></a>
             </div>
     
@@ -206,7 +251,7 @@
                         </div>
                         
                         <div class="parNot text-left " style="width: 90%; ">
-                            <a class="lang" href="../website/page-contact.html" style="direction: ltr; font-size: 16px;"><span
+                            <a class="lang" href="../website/page-join.html" style="direction: ltr; font-size: 16px;"><span
                                     class="rolling-text1">A|<span class="not">E</span> <i class="fa-solid fa-language not"></i></span></a>
                         </div>
                     </div>
@@ -226,14 +271,14 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="caption">
-                            <h6 class="sub-title">تواصل معنا</h6>
-                            <h1 class="fz-55">لنجعل علامتك التجارية<br> رائعة!</h1>
+                            <h6 class="sub-title">انضم الى فريقنا</h6>
+                            <h1 class="fz-55">نحن نبحث عنك</h1>
                         </div>
                     </div>
                     <div class="col-lg-5 valign">
                         <div class="text">
-                            <p>نحن نساعد عملائنا على تحقيق النجاح من خلال إنشاء هويات علامات تجارية، وتصميم تجارب رقمية، وإعداد مواد مطبوعة تُوصل
-                            الرسائل بوضوح، وتحقق الأهداف التسويقية، وتظهر بمظهر رائع</p>
+                            <p>إذا كنت مصمم جرافيك جريئًا يبدع أفكارًا مؤثرة، أو كاتب محتوى مبدعًا ومتخصصًا في التسويق الرقمي يعرف كيف يُحفّز المنصات
+                            بحملات جذابة، فأنت بالضبط من نبحث عنه.</p>
                         </div>
                     </div>
                 </div>
@@ -251,10 +296,9 @@
                 <div class="row">
                     <div class="col-lg-5">
                         <div class="sec-lg-head mb-80">
-                            <h6 class="dot-titl-non mb-10">ابقى على تواصل</h6>
+                            <h6 class="dot-titl-non mb-10">اعرض لنا اعمالك</h6>
                             <h2 class="fz-50">لنتواصل معًا.</h2>
-                            <p class="fz-15 mt-10">نحن متحمسون لسماع منك، ولنبدأ معًا شيئًا مميزًا. اتصل بنا لأي استفسار.
-                            إذا كنت تريد إضافة لمسة أقوى أو أكثر إبداعًا، يمكننا تعديلها وفقًا لاحتياجاتك!
+                            <p class="fz-15 mt-10">نحن متحمسون للانضمام معنا، كن جزءًا من رحلتنا، ودعونا معًا نبدأ شيئًا مميزًا!!
                             </p>
                             <div class="phone fz-30 fw-600 mt-30 underline" style="direction: ltr; text-align: right;">
                                 <a href="https://api.whatsapp.com/send/?phone=967773327748&text&type=phone_number&app_absent=0" target="_blank">+967 773 327 748</a>
@@ -280,11 +324,11 @@
                     </div>
                     <div class="col-lg-6 offset-lg-1 valign">
                         <div class="full-width">
-                            <form id="contact-form" method="post" action="contact.php">
+                            <form id="contact-form">
 
                                 <div class="messages"></div>
 
-                                <div class="controls row">
+                                <div class="controls row" >
 
                                     <div class="col-lg-6">
                                         <div class="form-group mb-30">
@@ -300,17 +344,80 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
+                                    <div class="col-lg-6">
                                         <div class="form-group mb-30">
-                                            <input id="form_subject" type="text" name="subject" placeholder="عنوان الموضوع">
+                                            <input type="tel" name="phone" id="phone" placeholder="رقم الهاتف">
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <textarea id="form_message" name="message" placeholder="الموضوع" rows="4"
-                                                required="required"></textarea>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-30">
+                                            <div class="form-group">
+                                                <input type="text" id="datepicker" class="date-picker" placeholder="اختر التاريخ">
+                                            </div>
                                         </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-30">
+                                            <select class="form-select" required>
+                                                <option selected>اختر الجنسية</option>
+                                                <option value="اليمن">اليمن</option>
+                                                <option value="السعودية">السعودية</option>
+                                                <option value="الإمارات">الإمارات</option>
+                                                <option value="الكويت">الكويت</option>
+                                                <option value="قطر">قطر</option>
+                                                <option value="البحرين">البحرين</option>
+                                                <option value="عمان">عمان</option>
+                                                <option value="مصر">مصر</option>
+                                                <option value="الأردن">الأردن</option>
+                                                <option value="العراق">العراق</option>
+                                                <option value="سوريا">سوريا</option>
+                                                <option value="لبنان">لبنان</option>
+                                                <option value="فلسطين">فلسطين</option>
+                                                <option value="ليبيا">ليبيا</option>
+                                                <option value="السودان">السودان</option>
+                                                <option value="المغرب">المغرب</option>
+                                                <option value="الجزائر">الجزائر</option>
+                                                <option value="تونس">تونس</option>
+                                                <option value="موريتانيا">موريتانيا</option>
+                                                <option value="اخر">اخر</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-30">
+                                            <select class="form-select" required>
+                                                <option selected>التخصص</option>
+                                                <option value="graph">التصميم الجرافيكي</option>
+                                                <option value="UXUI">تصميم واجهة المستخدم وتجربة المستخدم</option>
+                                                <option value="Web">تطوير الويب</option>
+                                                <option value="brand">تصميم هوية بصرية</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-30">
+                                            <input id="form_name" type="number" name="exper" placeholder="سنبن الخبرة" required="required" max="10" min="1">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-30">
+                                            <input id="form_name" type="url" placeholder="موقعك الالكتروني او صفحتك على مواقع التواصل ان وجد"  name="website">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="fileInput" class="file-upload">أرسل لنا الـCV</label>
+                                            <input type="file" id="fileInput" class="hidden-input" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
                                         <div class="mt-30">
                                             <button type="submit" class="butn butn-md butn-bord radius-30">
                                                 <span class="text">دعنا نتواصل</span>
@@ -362,9 +469,31 @@
 
 
 
+    <script>
+        // join with us
+
+        const input = document.querySelector("#phone");
+
+
+        // initialise plugin
+        const iti = window.intlTelInput(input, {
+            initialCountry: "Ye",
+            loadUtils: () => import("/intl-tel-input/js/utils.js?1733756310855"),
+        });
+
+
+        flatpickr("#datepicker", {
+                dateFormat: "Y-m-d",
+                disableMobile: true,
+                locale: "ar", 
+            });
+    </script>
 
 
 
+    <!-- intl-tel-input -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
@@ -377,6 +506,7 @@
 
     <!-- custom scripts -->
     <script src="assets/js/scripts.js"></script>
+
 
 </body>
 

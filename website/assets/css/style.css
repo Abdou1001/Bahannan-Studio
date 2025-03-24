@@ -70,6 +70,12 @@ body.dark {
   }
 }
 
+@media (min-width: 1200px) {
+  .container.work {
+    min-width: 95% !important;
+  }
+}
+
 /* == container ==  */
 
 body {
@@ -261,7 +267,7 @@ h6 {
 p {
   line-height: 1.8;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 200 !important;
   color: var(--text2-color);
   margin: 0;
 }
@@ -522,6 +528,7 @@ img {
 }
 
 .butn-circle span {
+  font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 2;
@@ -701,13 +708,10 @@ img {
 }
 
 .whatappIcon {
-  position: fixed;
-  bottom: 30px;
-  right: 90px;
-  font-size: 28px;
-  color: var(--text-color);
-  z-index: 99;
+  font-size: 25px;
+  color: var(--text2-color);
   transition: opacity .3s .5s;
+  margin-right: 40px;
 }
 
 .rolling-text {
@@ -1316,16 +1320,8 @@ img {
   white-space: nowrap;
 }
 
-.stroke {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--text-color);
-}
 
-.dark-text .stroke,
-.text-dark .stroke {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--bg-color);
-}
+
 
 .o-hidden {
   overflow: hidden;
@@ -3116,6 +3112,7 @@ body.loaded {
 }
 
 .navbar .navbar-nav .nav-link {
+  font-weight: 300 !important;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 13px;
@@ -3133,6 +3130,11 @@ body.loaded {
 .lang {
   color: var(--text-color) !important;
   font-weight: 700;
+}
+
+.light-dark,
+.light-dark2 {
+  display: none !important;
 }
 
 .not {
@@ -4222,8 +4224,6 @@ body.loaded {
   position: absolute;
   top: 10px;
   left: 20px;
-  color: transparent;
-  -webkit-text-stroke: 0.5px var(--border-color);
   z-index: -1;
 }
 
@@ -5511,25 +5511,26 @@ body.loaded {
 }
 
 .contact-crev input,
-.contact-crev textarea {
+.contact-crev textarea,
+.form-select {
   width: 100%;
   border: 1px solid var(--border-color);
   border-radius: 10px;
-  background: transparent;
   color: var(--text-color);
+  background: transparent;
   padding: 15px;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
 }
 
-.contact-crev input:focus,
-.contact-crev textarea:focus {
-  border-color: var(--text-color);
+.form-select option {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-.contact-crev textarea {
-  min-height: 180px;
+.contact-crev input:placeholder-shown {
+  text-align: left;
 }
 
 /* Numbers
@@ -5910,8 +5911,6 @@ body.loaded {
 }
 
 .approach-carso .item .stroke {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--text-color);
   font-weight: 800;
   line-height: 1;
 }
@@ -6529,16 +6528,19 @@ footer .bg-pattern {
 }
 
 .works .panel .item .cont h5 {
-  font-weight: 600;
+  font-weight: 200 !important;
   margin-bottom: 5px;
 }
 
 .works .panel .item .cont span {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 200 !important;
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: .75;
+}
+.works .panel .item .cont h6 {
+  font-weight: 200 !important;
 }
 
 .works .panel .item .link-overlay {
@@ -7152,6 +7154,10 @@ footer .bg-pattern {
 
 .work-carsouel .out-right .swiper-container {
   overflow: visible;
+}
+
+h6.line-height-1 {
+  font-weight: 100;
 }
 
 .work-carsouel.full-height {
@@ -8241,11 +8247,6 @@ header.in-box {
   background-position: center center;
 }
 
-.header-startup .caption .stroke {
-  color: transparent;
-  -webkit-text-stroke: 0.5px var(--text-color);
-}
-
 .header-startup .arrow-down {
   width: 100px;
   height: 100px;
@@ -8542,7 +8543,7 @@ header.in-box {
 .crev-header {
   min-height: 100vh;
   position: relative;
-  padding: 120px 0 0;
+  padding: 50px 0 0;
 }
 
 .crev-header .caption h1 {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
 
@@ -12,7 +12,7 @@
     <meta name="author" content="">
 
     <!-- Title  -->
-    <title>Bahannan Studio - contact</title>
+    <title>Bahannan Studio - Join With Team</title>
 
 <!-- font-awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -34,7 +34,46 @@
 
     <!-- Core Style Css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
+    <style>
+        .file-upload {
+            display: inline-block;
+            padding: 12px 23px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            background: transparent;
+            color: var(--text-color);
+            transition: background-color 0.3s ease;
+            border-radius: 20px;
+            font-weight: 200;
+        }
+    
+        .file-upload:hover {
+            background: var(--text-color);
+            color: var(--bg-color);
+        }
+    
+        /* إخفاء input الأصلي */
+        .hidden-input {
+            display: none;
+        }
+    
+        .iti__country-list {
+            background: black !important;
+            font-size: 15px !important;
+            left: 0px !important;
+        }
+    
+        .iti--allow-dropdown {
+            width: 100%;
+        }
+    </style>
 
 </head>
 
@@ -129,7 +168,7 @@
             </div>
 
             <div class="parNot text-left d-none d-lg-block">
-                <a class="lang" href="../website - ar/page-contact.html"><span class="rolling-text1"><span class="not">A</span>|E
+                <a class="lang" href="../website - ar/page-join.html"><span class="rolling-text1"><span class="not">A</span>|E
                         <i class="fa-solid fa-language not px-1"></i></span></a>
             </div>
     
@@ -212,7 +251,7 @@
                         </div>
                         
                         <div class="parNot text-right" style="width: 90%;">
-                            <a class="lang" href="../website - ar/page-contact.html" style="font-size: 16px;"><span class="rolling-text1"><span
+                            <a class="lang" href="../website - ar/page-join.html" style="font-size: 16px;"><span class="rolling-text1"><span
                                         class="not">A</span>|E <i class="fa-solid fa-language not"></i></span></a>
                         </div>
     
@@ -233,18 +272,21 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="caption">
-                            <h6 class="sub-title">Contact Us</h6>
-                            <h1 class="fz-55">Let's make <br> your brand brilliant!</h1>
+                            <h6 class="sub-title">Join Our Team</h6>
+                            <h1 class="fz-55">We Are Looking for You</h1>
                         </div>
                     </div>
                     <div class="col-lg-5 valign">
                         <div class="text">
-                            <p>We help our clients succeed by creating brand identities, digital experiences, and print materials that communicate clearly, achieve marketing goals, and look fantastic.</p>
+                            <p>If you are a bold graphic designer who creates impactful ideas, or a creative content writer and
+                                digital marketing specialist who knows how to engage platforms with compelling campaigns, then
+                                you are exactly who we are looking for.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+
 
         <!-- ==================== End Slider ==================== -->
 
@@ -283,7 +325,7 @@
                     </div>
                     <div class="col-lg-6 offset-lg-1 valign">
                         <div class="full-width">
-                            <form id="contact-form" method="post" action="contact.php">
+                            <form id="contact-form">
 
                                 <div class="messages"></div>
 
@@ -372,6 +414,10 @@
     <!-- jQuery -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/jquery-migrate-3.4.0.min.js"></script>
+
+    <!-- intl-tel-input -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
 
     <!-- plugins -->
     <script src="assets/js/plugins.js"></script>

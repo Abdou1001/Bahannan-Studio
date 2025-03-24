@@ -66,6 +66,11 @@ body.dark {
     min-width: 100% !important;
   }
 }
+@media (min-width: 1200px) {
+  .container.work {
+    min-width: 95% !important;
+  }
+}
 
 /* == container ==  */
 
@@ -257,7 +262,7 @@ h6 {
 p {
   line-height: 1.8;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 100 !important;
   color: --text2-color;
   margin: 0;
 }
@@ -432,21 +437,21 @@ img {
 }
 
 .butn.butn-bord {
-  border-color: var(--bg-color);
+  border-color: var(--border-color);
   background: transparent;
-  color: var(--bg-color);
+  color: var(--text-color);
   -webkit-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
 }
 
 .butn.butn-bord:hover {
-  background: var(--bg-color);
-  color: var( --dark-color);
+  background: var(--text-color);
+  color: var(--bg-color);
 }
 
 .butn.butn-bord:hover span {
-  color: var( --dark-color);
+  color: var( --bg-color-color);
 }
 
 .butn.butn-bg {
@@ -518,6 +523,7 @@ img {
 }
 
 .butn-circle span {
+  font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 2;
@@ -699,13 +705,10 @@ img {
 }
 
 .whatappIcon {
-  position: fixed;
-  bottom: 30px;
-  right: 70px;
-  font-size: 30px;
+  font-size: 25px;
   color: var(--text2-color);
-  z-index: 99;
   transition: opacity .3s .5s;
+  margin-left: 40px;
 }
 
 .rolling-text {
@@ -1314,16 +1317,6 @@ img {
   white-space: nowrap;
 }
 
-.stroke {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--text-color);
-}
-
-.dark-text .stroke,
-.text-dark .stroke {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--text-color);
-}
 
 .o-hidden {
   overflow: hidden;
@@ -3114,6 +3107,7 @@ body.loaded {
 }
 
 .navbar .navbar-nav .nav-link {
+  font-weight: 100 !important;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 15px;
@@ -3134,6 +3128,11 @@ body.loaded {
 }
 .parNot:hover .not{
   color: var(--text-color);
+}
+
+.light-dark,
+.light-dark2{
+  display: none !important;
 }
 
 .navbar .navbar-nav .nav-link .rolling-text {
@@ -4226,8 +4225,6 @@ svg #text {
   position: absolute;
   top: 10px;
   left: 20px;
-  color: transparent;
-  -webkit-text-stroke: 0.5px var(--border-color);
   z-index: -1;
 }
 
@@ -5515,21 +5512,29 @@ svg #text {
 }
 
 .contact-crev input,
-.contact-crev textarea {
+.contact-crev textarea,
+.form-select {
   width: 100%;
   border: 1px solid var(--border-color);
   border-radius: 10px;
   background: transparent;
-  color: var(--bg-color);
+  color: var(--text-color);
   padding: 15px;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
 }
+.form-select option{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.contact-crev input:placeholder-shown {
+  text-align: right;
+}
 
 .contact-crev input:focus,
 .contact-crev textarea:focus {
-  border-color: var(--bg-color);
+  border-color: var(--text2-color);
 }
 
 .contact-crev textarea {
@@ -5914,8 +5919,6 @@ svg #text {
 }
 
 .approach-carso .item .stroke {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--bg-color);
   font-weight: 800;
   line-height: 1;
 }
@@ -6536,16 +6539,19 @@ footer .bg-pattern {
 
 .works .panel .item .cont h5 {
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 100;
   margin-bottom: 5px;
 }
 
 .works .panel .item .cont span {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: .75;
+}
+.works .panel .item .cont h6 {
+  font-weight: 100;
 }
 
 .works .panel .item .link-overlay {
@@ -7145,10 +7151,14 @@ footer .bg-pattern {
 .work-carsouel .out-right .swiper-container {
   overflow: visible;
 }
+h6.line-height-1{
+  font-weight: 100;
+}
 
 .work-carsouel.full-height {
   min-height: 100vh;
 }
+
 
 .work-carsouel.full-height .swiper-slide .img {
   height: 60vh;
@@ -8231,10 +8241,6 @@ header.in-box {
   background-position: center center;
 }
 
-.header-startup .caption .stroke {
-  color: transparent;
-  -webkit-text-stroke: 0.5px var(--bg-color);
-}
 
 .header-startup .arrow-down {
   width: 100px;
@@ -8532,7 +8538,7 @@ header.in-box {
 .crev-header {
   min-height: 100vh;
   position: relative;
-  padding: 120px 0 0;
+  padding: 50px 0 0;
 }
 
 .crev-header .caption h1 {
